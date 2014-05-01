@@ -1,1 +1,434 @@
-<doc>
+<!DOCTYPE html> 
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>NextGen 2014 - Mobile Application</title>
+  
+  
+	<link rel="stylesheet"  href="css/jquery.mobile-1.2.1.min.css" />
+  <link rel="stylesheet" href="css/walk.css"/>
+  <link rel="stylesheet" href="css/jw-jqm-cal.css" />
+  <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+  
+  
+	
+  
+  <style type="text/css">
+		div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+		div.gallery-item { float: left; width: 33.333333%; }
+		div.gallery-item a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+		div.gallery-item img { display: block; width: 100%; height: auto; }
+		#Gallery1 .ui-content, #Gallery2 .ui-content { overflow: hidden; }
+	</style>
+  
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.2.1.min.js"></script>
+  
+  
+  <script type="text/javascript" src="js/simple-inheritance.min.js"></script>
+	<script type="text/javascript" src="js/jquery.animate-enhanced.min.js"></script>
+	<script type="text/javascript" src="js/code-photoswipe-jQuery-1.0.11.min.js"></script>
+	<script type="text/javascript">
+		/*
+			This example shows how to set up PhotoSwipe using jQuery Mobile.
+		*/
+		$(document).ready(function(){
+			
+			$('div.gallery-page').live('pageshow', function(e){
+					
+				// Re-initialize with the photos for the current page
+				$("div.gallery a", e.target).photoSwipe();
+				return true;
+				
+			})
+				
+		});
+	
+	</script>
+  
+  
+<script type="text/javascript" src="js/jw-jqm-cal.js"></script>
+<script type="text/javascript">
+$("#view-calendar").live('pageinit', function(event, ui) {
+   $("#calendar").jqmCalendar({
+      events : [ { "summary" : "ExpoTees", "begin" : new Date("2014-02-05 11:00:00"), "end" : new Date("2014-02-07 18:00:00") }, { "summary" : "NextGen", "begin" : new Date(), "end" : new Date() } ],
+      months : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      days : ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+      startOfWeek : 0
+   });
+})
+</script>
+  
+  <style>	
+		.nav-glyphish .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+		.nav-glyphish .ui-btn .ui-icon { width: 30px!important; height: 30px!important; padding-top: 10px; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+		#home .ui-icon { background:  url(img/home.png) 50% 50% no-repeat; background-size: 30px 30px; }
+		#student .ui-icon { background:  url(img/students.png) 50% 50% no-repeat; background-size: 30px 30px;  }
+		#gallery .ui-icon { background:  url(img/arts.png) 50% 50% no-repeat;  background-size: 30px 30px; }
+		#event .ui-icon { background:  url(img/events.png) 50% 50% no-repeat;  background-size: 30px 30px; }
+		#contact .ui-icon { background:  url(img/contact.png) 50% 50% no-repeat;  background-size: 30px 30px; }
+    
+    body {background-image:url("img/02.jpg");}
+    .a-steve, .h4 { height: 140px; margin-left: 0px; color: #fff; margin-top: -1px; font-size: 12px; color: #fff; text-align: center;}
+    .b-steve, .h4 { margin-left: 0px; color: #fff; margin-top: -1px; font-size: 12px; color: #fff; text-align: center;}
+    .c-steve, .h4 { margin-left: 0px; color: #fff; margin-top: -1px; font-size: 12px; color: #fff; text-align: center;}
+	</style>
+  
+</head>  
+<body> 
+
+	<div data-role="page" id="index" class="type-interior" data-theme="sss">
+  
+  <div data-role="header" data-position="inline" data-theme="a" class="global-header">
+        <div class="logo"><a href="#index"><img src="img/logo.png" class="logo" alt="NextGen" border="0" /></a>
+  </div></div>
+          
+ 
+  <div data-role="content">
+  <p></p>
+  <div class="ui-grid-b">
+	<div class="ui-block-a"><div class="a-steve"><img src="img/home.png" width="64" height="64"><h4>home</h4></div></div>
+	<div class="ui-block-b"><div class="b-steve"><a href="#cont"><img src="img/contact.png" width="64" height="64">
+  </a><h4>contact</h4></div></div>
+  <div class="ui-block-c"><div class="c-steve"><img src="img/Register.png" width="64" height="64"><h4>register</h4></div></div>
+  <div class="ui-block-a"><div class="a-steve"><a href="#Gallery1"><img src="img/arts.png" width="64" height="64"></a><h4>gallery</h4></div></div>
+  <div class="ui-block-b"><div class="b-steve"><a href="#view-calendar"><img src="img/calendar.png" width="64" height="64"></a><h4>calendar</h4></div></div>
+	<div class="ui-block-c"><div class="c-steve"><a href="#Gallery1"><img src="img/gallery.png" width="64" height="64"></a><h4>nextgen</h4></div></div>
+	<div class="ui-block-a"><div class="a-steve"><img src="img/Certificate.png" width="64" height="64"><h4>certificate</h4></div></div>
+	<div class="ui-block-b"><div class="b-steve"><a href="#studs"><img src="img/Student-id.png" width="64" height="64"></a><h4>login</h4></div></div>
+  <div class="ui-block-c"><div class="c-steve"><a href="#studs"><img src="img/Teachers.png" width="64" height="64"></a><h4>staff</h4></div></div>
+	<div class="ui-block-a"><div class="a-steve"><a href="#studs"><img src="img/Graduate.png" width="64" height="64"></a><h4>students</h4></div></div>
+	<div class="ui-block-b"><div class="b-steve"><a href="#view-calendar"><img src="img/events.png" width="64" height="64"></a><h4>events</h4></div></div>
+	<div class="ui-block-c"><div class="c-steve"><img src="img/tel.png" width="64" height="64"><h4>phone</h4></div></div>
+	</div></div>
+  
+<div data-role="footer">
+		<div data-role="navbar" data-iconpos="bottom">
+			<ul>
+				<li><a href="#" data-icon="arrow-r">Summary</a></li>
+				<li><a href="#" data-icon="arrow-l" class="ui-btn-active">Favs</a></li>
+				<li><a href="#" data-icon="arrow-r">Setup</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /home page -->
+  
+  
+  
+<!-- begin student page -->  
+<div data-role="page" id="studs" class="type-interior">
+  <div data-role="header" data-theme="a" class="nav-glyphish">
+		<div data-role="navbar" class="nav-glyphish" data-grid="d">
+		<ul>
+			<li><a href="#index" id="home" data-icon="custom">Home</a></li>
+			<li><a href="#" id="student" data-icon="custom" class="ui-btn-active ui-state-persist">Students</a></li>
+			<li><a href="#gall" id="gallery" data-icon="custom">galleries</a></li>
+			<li><a href="#eve" id="event" data-icon="custom">Events</a></li>
+			<li><a href="#cont" id="contact" data-icon="custom">Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+
+<div data-role="header" data-position="inline" data-theme="b" class="global-header">
+        <div class="logo"><a href="#index"><img src="img/logo.png" class="logo" alt="NextGen" border="0" /></a>
+  </div></div>
+          
+ <div data-role="content">	
+		<ul data-role="listview" data-inset="true" data-split-theme="a">
+  <li data-role="list-divider">NextGen 2014</li>
+			<li><a href="#studs">
+				<img src="img/home1.jpg" />
+				<h3>NextGen Galleries</h3>
+				<p>These galleries are from nextgen 2013 and contain lots of images from that event</p>
+			</a></li>
+			<li><a href="#event">
+				<img src="img/home2.jpg" />
+				<h3>Warning</h3>
+				<p>Hot Chip</p>
+			</a></li>
+			<li><a href="#gallery">
+				<img src="img/home3.jpg" />
+				<h3>Wolfgang Amadeus Phoenix</h3>
+				<p>Phoenix</p>
+			</a></li>
+			<li><a href="#contact">
+				<img src="img/home4.jpg" />
+				<h3>Of The Blue Colour Of The Sky</h3>
+				<p>Ok Go</p>
+			</a></li>
+			<li><a href="#index">
+				<img src="img/home5.jpg" />
+				<h3>Elephant</h3>
+				<p>The White Stripes</p>
+			</a></li>
+			
+		</ul>
+		</div>
+    <!--/content-primary -->
+    
+    <div data-role="footer" class="footer-docs" data-theme="c">
+		<p class="jqm-version"></p>
+		<p>Copyright 2014 NextGen 2014 Teesside University</p>
+	</div>
+  </div>
+  <!-- /student page -->
+
+
+
+<!-- begin Gallery page -->
+<div data-role="page" id="Gallery1" class="gallery-page">
+
+	<div data-role="header" data-theme="a" class="nav-glyphish">
+		<div data-role="navbar" class="nav-glyphish" data-grid="d">
+		<ul>
+			<li><a href="#index" id="home" data-icon="custom">Home</a></li>
+			<li><a href="#studs" id="student" data-icon="custom">Students</a></li>
+			<li><a href="#" id="gallery" data-icon="custom" class="ui-btn-active ui-state-persist">galleries</a></li>
+			<li><a href="#view-calendar" id="event" data-icon="custom">Events</a></li>
+			<li><a href="#cont" id="contact" data-icon="custom">Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+
+<div data-role="header" data-position="inline" data-theme="b" class="global-header">
+        <div class="logo"><a href="#index"><img src="img/logo.png" class="logo" alt="NextGen" border="0" /></a>
+  </div></div>
+
+	
+  <div data-role="content">
+  <div data-role="content">	
+		
+		<div class="gallery">
+	
+			<div class="gallery-row">
+		
+				<div class="gallery-item"><a href="images/full/001.jpg" rel="external"><img src="images/thumb/001.jpg" alt="Image 001" /></a></div>
+				
+				<div class="gallery-item"><a href="images/full/002.jpg" rel="external"><img src="images/thumb/002.jpg" alt="Image 002" /></a></div>
+				
+				<div class="gallery-item"><a href="images/full/003.jpg" rel="external"><img src="images/thumb/003.jpg" alt="Image 003" /></a></div>
+				
+			</div>
+
+		
+			<div class="gallery-row">
+		
+				<div class="gallery-item"><a href="images/full/004.jpg" rel="external"><img src="images/thumb/004.jpg" alt="Image 004" /></a></div>
+				
+				<div class="gallery-item"><a href="images/full/005.jpg" rel="external"><img src="images/thumb/005.jpg" alt="Image 005" /></a></div>
+				
+				<div class="gallery-item"><a href="images/full/006.jpg" rel="external"><img src="images/thumb/006.jpg" alt="Image 006" /></a></div>
+		
+			</div>
+		
+			<div class="gallery-row">
+		
+				<div class="gallery-item"><a href="images/full/007.jpg" rel="external"><img src="images/thumb/007.jpg" alt="Image 007" /></a></div>
+				
+				<div class="gallery-item"><a href="images/full/008.jpg" rel="external"><img src="images/thumb/008.jpg" alt="Image 008" /></a></div>
+				
+				<div class="gallery-item"><a href="images/full/009.jpg" rel="external"><img src="images/thumb/009.jpg" alt="Image 009" /></a></div>
+        </div>
+		</div>
+	</div></div>
+	
+	<div data-role="footer" class="footer-docs" data-theme="c">
+		<p class="jqm-version"></p>
+		<p>Copyright 2014 NextGen 2014 Teesside University</p>
+	</div>
+  </div>
+  <!-- // Gallery page // -->
+
+
+
+  <!-- // Begin Events page // -->
+<div data-role="page" id="view-calendar" class="type-interior">
+  <div data-role="header" data-theme="a" class="nav-glyphish">
+		<div data-role="navbar" class="nav-glyphish" data-grid="d">
+		<ul>
+			<li><a href="#index" id="home" data-icon="custom">Home</a></li>
+			<li><a href="#studs" id="student" data-icon="custom">Students</a></li>
+			<li><a href="#Gallery1" id="gallery" data-icon="custom">galleries</a></li>
+			<li><a href="#" id="event" data-icon="custom" class="ui-btn-active ui-state-persist">Events</a></li>
+			<li><a href="#cont" id="contact" data-icon="custom">Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+<div data-role="header" data-position="inline" data-theme="b" class="global-header">
+        <div class="logo"><a href="#index"><img src="img/logo.png" class="logo" alt="NextGen" border="0" /></a>
+  </div></div>
+  
+  <div data-role="content">
+ <div data-role="content">
+<div id="calendar"></div>
+</div>	
+		<ul data-role="listview" data-inset="true" data-split-theme="a">
+  <li data-role="list-divider">2013 Image Galleries</li>
+			<li><a href="#studs">
+				<img src="img/home1.jpg" />
+				<h3>Nextgen Galleries</h3>
+				<p>These galleries are from nextgen 2013 and contain lots of images from that event</p>
+			</a></li>
+			<li><a href="#event">
+				<img src="img/home2.jpg" />
+				<h3>Animex Galleries</h3>
+				<p>Hot Chip</p>
+			</a></li>
+			<li><a href="#gallery">
+				<img src="img/home3.jpg" />
+				<h3>ExpoTees Galleries</h3>
+				<p>Phoenix</p>
+			</a></li>
+		</ul>
+		</div>
+    <!--/content-primary -->
+    
+    <div data-role="footer" class="footer-docs" data-theme="c">
+		<p class="jqm-version"></p>
+		<p>Copyright 2014 NextGen 2014 Teesside University</p>
+	</div>
+  </div>
+  <!-- // Events page // -->  
+  
+
+<!-- begin Contacts page -->
+<div data-role="page" id="cont" class="type-interior">
+  <div data-role="header" data-theme="a" class="nav-glyphish">
+		<div data-role="navbar" class="nav-glyphish" data-grid="d">
+		<ul>
+			<li><a href="#index" id="home" data-icon="custom">Home</a></li>
+			<li><a href="#studs" id="student" data-icon="custom">Students</a></li>
+			<li><a href="#Gallery1" id="gallery" data-icon="custom">galleries</a></li>
+			<li><a href="#view-calendar" id="event" data-icon="custom">Events</a></li>
+			<li><a href="#" id="contact" data-icon="custom" class="ui-btn-active ui-state-persist">Contact</a></li>
+		</ul>
+		</div>
+	</div>
+
+  <div data-role="header" data-position="inline" data-theme="b" class="global-header">
+        <div class="logo"><a href="#index"><img src="img/logo.png" class="logo" alt="NextGen" border="0" /></a>
+  </div></div>
+  
+ <div data-role="content">
+		<div class="content-primary">
+
+		<form action="#" method="get">
+
+			<h2>Register for NextGen</h2>
+
+			<p>Please fill in our form to register for NextGen 2014.</p>
+
+			<div data-role="fieldcontain">
+	         <label for="name">Name:</label>
+	         <input type="text" name="name" id="name" value="" data-mini="true" />
+			</div>
+
+			<div data-role="fieldcontain">
+			<label for="textarea">Any Questions:</label>
+			<textarea cols="40" rows="8" name="textarea" id="textarea" data-mini="true"></textarea>
+			</div>
+
+			<div data-role="fieldcontain">
+	         <label for="search">Search Input:</label>
+	         <input type="search" name="password" id="search" value=""  data-mini="true" />
+			</div>
+  <div data-role="fieldcontain">
+				<label for="select-choice-1" class="select">Choose shipping method:</label>
+				<select name="select-choice-1" id="select-choice-1" data-mini="true">
+					<option value="standard">Standard: 7 day</option>
+					<option value="rush">Rush: 3 days</option>
+					<option value="express">Express: next day</option>
+					<option value="overnight">Overnight</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-3" class="select">Your state:</label>
+				<select name="select-choice-3" id="select-choice-3" data-mini="true">
+					<option value="AL">Alabama</option>
+					<option value="AK">Alaska</option>
+					<option value="AZ">Arizona</option>
+					<option value="AR">Arkansas</option>
+					<option value="CA">California</option>
+					<option value="CO">Colorado</option>
+					<option value="CT">Connecticut</option>
+					<option value="DE">Delaware</option>
+					<option value="FL">Florida</option>
+					<option value="GA">Georgia</option>
+					<option value="HI">Hawaii</option>
+					<option value="ID">Idaho</option>
+					<option value="IL">Illinois</option>
+					<option value="IN">Indiana</option>
+					<option value="IA">Iowa</option>
+					<option value="KS">Kansas</option>
+					<option value="KY">Kentucky</option>
+					<option value="LA">Louisiana</option>
+					<option value="ME">Maine</option>
+					<option value="MD">Maryland</option>
+					<option value="MA">Massachusetts</option>
+					<option value="MI">Michigan</option>
+					<option value="MN">Minnesota</option>
+					<option value="MS">Mississippi</option>
+					<option value="MO">Missouri</option>
+					<option value="MT">Montana</option>
+					<option value="NE">Nebraska</option>
+					<option value="NV">Nevada</option>
+					<option value="NH">New Hampshire</option>
+					<option value="NJ">New Jersey</option>
+					<option value="NM">New Mexico</option>
+					<option value="NY">New York</option>
+					<option value="NC">North Carolina</option>
+					<option value="ND">North Dakota</option>
+					<option value="OH">Ohio</option>
+					<option value="OK">Oklahoma</option>
+					<option value="OR">Oregon</option>
+					<option value="PA">Pennsylvania</option>
+					<option value="RI">Rhode Island</option>
+					<option value="SC">South Carolina</option>
+					<option value="SD">South Dakota</option>
+					<option value="TN">Tennessee</option>
+					<option value="TX">Texas</option>
+					<option value="UT">Utah</option>
+					<option value="VT">Vermont</option>
+					<option value="VA">Virginia</option>
+					<option value="WA">Washington</option>
+					<option value="WV">West Virginia</option>
+					<option value="WI">Wisconsin</option>
+					<option value="WY">Wyoming</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-a" class="select">Choose shipping method:</label>
+				<select name="select-choice-a" id="select-choice-a" data-native-menu="false" data-mini="true">
+					<option>Custom menu example</option>
+					<option value="standard">Standard: 7 day</option>
+					<option value="rush">Rush: 3 days</option>
+					<option value="express">Express: next day</option>
+					<option value="overnight">Overnight</option>
+				</select>
+			</div>
+
+		<div class="ui-body ui-body-b">
+		<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="d" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit" data-theme="a" data-mini="true">Submit</button></div>
+	    </fieldset>
+		</div>
+	</form>
+	</div></div><!--/content-primary -->
+<!-- /content -->  
+ <p></p> 
+<div data-role="footer" class="footer-docs" data-theme="c">
+		<p class="jqm-version"></p>
+		<p>Copyright 2014 NextGen 2014 Teesside University</p>
+	</div>
+</div>
+<!-- / Contacts page -->
+
+</body>
+</html>
